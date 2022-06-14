@@ -1,0 +1,220 @@
+:root
+{
+    --banner-height: 10%;
+    --nav-width: 300px;
+    --border-radius: 10px;
+    --margin-size:10px;
+    --bottom-height:200px;
+}
+
+body
+{
+    background: rgb(255, 255, 255);
+    height: 100%;
+    width: 100%;
+    /* position: absolute; */
+    margin: 0;
+}
+
+header
+{
+    top:0px;
+    text-align: center;
+    background: rgb(255, 255, 255);
+    height: var(--banner-height);
+    width: 100%;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:32px;
+    height: 100%;
+}
+
+h2{
+  text-align: center;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size:32px;
+  width: 100%;
+}
+
+h4{
+  text-align: center;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size:24px;
+  width: 100%;
+}
+
+main{
+    height: 100%;
+    background-color:rgb(180, 180, 180);
+    padding: 50px;
+}
+
+.gameplay{
+    border: 5px solid blue;
+    margin: auto;
+    width:500px;
+    /* height:500px; */
+    background-color:white;
+    border-radius:10px;
+    padding:10px;
+}
+span{
+  display:block
+}
+.history-play{
+  border: 5px solid blue;
+  width:250px;
+  /* height:500px; */
+  background-color:white;
+  border-radius:10px;
+  padding:10px;
+  float:left; 
+  margin:10px;
+  display: inline;
+}
+
+.history-text{
+  font-size: 1vw;;
+}
+
+nav{
+  /* padding:px; */
+  width:100%;
+  height: 300px;
+  background-color:rgb(117, 117, 117);
+	white-space: nowrap;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	/* -webkit-overflow-scrolling: touch; */
+}
+
+/* Draws the sodoku board with thicker line in every third */
+li:nth-child(n):nth-child(-n+9) {
+  border-top-width: 3px;
+}
+li:nth-child(n+73):nth-child(-n+81) {
+  border-bottom-width: 3px;
+}
+li:nth-child(3n) {
+  border-right-width: 3px;
+}
+li:nth-child(9n+1) {
+  border-left-width: 3px;
+}
+li:nth-child(n+19):nth-child(-n+27) {
+  border-bottom-width: 3px;
+}
+li:nth-child(n+46):nth-child(-n+54) {
+  border-bottom-width: 3px;
+}
+  
+ul {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+  justify-content: center;
+  align-content: center;
+  grid-gap: 0rem;
+  list-style: none;
+  margin: 0 0 0;
+  padding: 0;
+  font-size: 30px;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input{
+  border: none;
+  width:30px;
+  height:30px;
+}
+
+input[type="text"]
+{
+    font-size: 30px;
+    text-align: center;
+}
+
+.submit{
+  margin: auto;
+  background-color:white;
+  border-radius:10px;
+  padding:20px;
+  justify-content: center;
+  align-content: center;
+  width:100%;
+}
+
+.submit:hover{
+  background-color:whitesmoke;
+}
+
+
+ /* The Modal (background) */
+ .modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  border-radius: 10px;
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 50px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+.current-solved{
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* Button Interaction */
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+} 
+
+.solvedBoard{
+  display:none;
+}
+
+.clear{
+  margin: auto;
+  background-color:rgb(150, 150, 150);
+  border-radius:10px;
+  padding:20px;
+  justify-content: center;
+  align-content: center;
+  width:100%;
+}
+
+.credit{
+  font-size: 8px;
+  font-family:Arial, Helvetica, sans-serif;
+}

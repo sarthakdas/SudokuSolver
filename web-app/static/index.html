@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en-gb">
+<meta charset="utf-8">
+<link rel="stylesheet" href="default.css">
+<link rel="shortcut icon" href="favicon.png">
+<script type="module" src="main.js"></script>
+<script type="module" src="interactions.js"></script>
+<title>Sodoku Solver</title>
+<header>
+    <h1>Sudoku Solver</h1>
+    <h4>Enter values into the board and click the button to see the solved version</h4>
+</header>
+
+<!-- Main Webpage -->
+<main>
+<!-- Main Sodoku Board -->
+<div class="gameplay center" id="boardTemplate">
+    <ul>
+    <!-- TODO: Clone template technique,  add instuctions -->
+    <li><span><input type="text" id="1-1" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="1-2" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="1-3" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="1-4" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="1-5" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="1-6" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="1-7" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="1-8" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="1-9" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="2-1" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="2-2" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="2-3" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="2-4" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="2-5" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="2-6" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="2-7" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="2-8" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="2-9" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="3-1" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="3-2" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="3-3" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="3-4" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="3-5" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="3-6" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="3-7" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="3-8" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="3-9" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="4-1" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="4-2" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="4-3" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="4-4" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="4-5" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="4-6" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="4-7" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="4-8" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="4-9" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="5-1" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="5-2" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="5-3" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="5-4" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="5-5" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="5-6" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="5-7" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="5-8" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="5-9" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="6-1" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="6-2" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="6-3" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="6-4" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="6-5" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="6-6" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="6-7" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="6-8" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="6-9" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="7-1" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="7-2" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="7-3" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="7-4" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="7-5" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="7-6" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="7-7" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="7-8" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="7-9" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="8-1" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="8-2" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="8-3" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="8-4" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="8-5" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="8-6" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="8-7" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="8-8" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="8-9" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="9-1" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="9-2" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="9-3" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="9-4" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="9-5" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="9-6" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="9-7" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="9-8" name="fname" maxlength="1"></span></li>
+    <li><span><input type="text" id="9-9" name="fname" maxlength="1"></span></li>
+
+    </ul>
+  </div>
+
+  <br>
+  <button id="solve-button" class="submit" type="button">SOLVE MY SUDOKU</button>
+  <button id="clear-button" class="clear" type="button">CLEAR SUDOKU BOARD</button>
+  <p class="credit">-Made by Sarthak Das</p>
+</main>
+
+
+
+
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2 id="answer">Solved Sudoko</h2>
+    <h4 id="ansSub"></h4>
+
+    <div class="gameplay center" id="solvedBoard">
+      <ul>
+        <li id="c1-1" class="current-solved">1</li>
+        <li id="c1-2" class="current-solved">1</li>
+        <li id="c1-3" class="current-solved">1</li>
+        <li id="c1-4" class="current-solved">1</li>
+        <li id="c1-5" class="current-solved">1</li>
+        <li id="c1-6" class="current-solved">1</li>
+        <li id="c1-7" class="current-solved">1</li>
+        <li id="c1-8" class="current-solved">1</li>
+        <li id="c1-9" class="current-solved">1</li>
+        <li id="c2-1" class="current-solved">1</li>
+        <li id="c2-2" class="current-solved">1</li>
+        <li id="c2-3" class="current-solved">1</li>
+        <li id="c2-4" class="current-solved">1</li>
+        <li id="c2-5" class="current-solved">1</li>
+        <li id="c2-6" class="current-solved">1</li>
+        <li id="c2-7" class="current-solved">1</li>
+        <li id="c2-8" class="current-solved">1</li>
+        <li id="c2-9" class="current-solved">1</li>
+        <li id="c3-1" class="current-solved">1</li>
+        <li id="c3-2" class="current-solved">1</li>
+        <li id="c3-3" class="current-solved">1</li>
+        <li id="c3-4" class="current-solved">1</li>
+        <li id="c3-5" class="current-solved">1</li>
+        <li id="c3-6" class="current-solved">1</li>
+        <li id="c3-7" class="current-solved">1</li>
+        <li id="c3-8" class="current-solved">1</li>
+        <li id="c3-9" class="current-solved">1</li>
+        <li id="c4-1" class="current-solved">1</li>
+        <li id="c4-2" class="current-solved">1</li>
+        <li id="c4-3" class="current-solved">1</li>
+        <li id="c4-4" class="current-solved">1</li>
+        <li id="c4-5" class="current-solved">1</li>
+        <li id="c4-6" class="current-solved">1</li>
+        <li id="c4-7" class="current-solved">1</li>
+        <li id="c4-8" class="current-solved">1</li>
+        <li id="c4-9" class="current-solved">1</li>
+        <li id="c5-1" class="current-solved">1</li>
+        <li id="c5-2" class="current-solved">1</li>
+        <li id="c5-3" class="current-solved">1</li>
+        <li id="c5-4" class="current-solved">1</li>
+        <li id="c5-5" class="current-solved">1</li>
+        <li id="c5-6" class="current-solved">1</li>
+        <li id="c5-7" class="current-solved">1</li>
+        <li id="c5-8" class="current-solved">1</li>
+        <li id="c5-9" class="current-solved">1</li>
+        <li id="c6-1" class="current-solved">1</li>
+        <li id="c6-2" class="current-solved">1</li>
+        <li id="c6-3" class="current-solved">1</li>
+        <li id="c6-4" class="current-solved">1</li>
+        <li id="c6-5" class="current-solved">1</li>
+        <li id="c6-6" class="current-solved">1</li>
+        <li id="c6-7" class="current-solved">1</li>
+        <li id="c6-8" class="current-solved">1</li>
+        <li id="c6-9" class="current-solved">1</li>
+        <li id="c7-1" class="current-solved">1</li>
+        <li id="c7-2" class="current-solved">1</li>
+        <li id="c7-3" class="current-solved">1</li>
+        <li id="c7-4" class="current-solved">1</li>
+        <li id="c7-5" class="current-solved">1</li>
+        <li id="c7-6" class="current-solved">1</li>
+        <li id="c7-7" class="current-solved">1</li>
+        <li id="c7-8" class="current-solved">1</li>
+        <li id="c7-9" class="current-solved">1</li>
+        <li id="c8-1" class="current-solved">1</li>
+        <li id="c8-2" class="current-solved">1</li>
+        <li id="c8-3" class="current-solved">1</li>
+        <li id="c8-4" class="current-solved">1</li>
+        <li id="c8-5" class="current-solved">1</li>
+        <li id="c8-6" class="current-solved">1</li>
+        <li id="c8-7" class="current-solved">1</li>
+        <li id="c8-8" class="current-solved">1</li>
+        <li id="c8-9" class="current-solved">1</li>
+        <li id="c9-1" class="current-solved">1</li>
+        <li id="c9-2" class="current-solved">1</li>
+        <li id="c9-3" class="current-solved">1</li>
+        <li id="c9-4" class="current-solved">1</li>
+        <li id="c9-5" class="current-solved">1</li>
+        <li id="c9-6" class="current-solved">1</li>
+        <li id="c9-7" class="current-solved">1</li>
+        <li id="c9-8" class="current-solved">1</li>
+        <li id="c9-9" class="current-solved">1</li>   
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+</html>
